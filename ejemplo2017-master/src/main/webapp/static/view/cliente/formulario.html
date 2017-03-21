@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Formulario Cliente</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style type="text/css">
+
+            * {
+                margin:0px;
+                padding:0px;
+            }
+
+            #header {
+                margin:auto;
+                width:500px;
+                font-family:Arial, Helvetica, sans-serif;
+            }
+
+            ul, ol {
+                list-style:none;
+            }
+
+            .nav > li {
+                float:left;
+            }
+
+            .nav li a {
+                background-color:#000;
+                color:#fff;
+                text-decoration:none;
+                padding:10px 12px;
+                display:block;
+            }
+
+            .nav li a:hover {
+                background-color:#434343;
+            }
+
+            .nav li ul {
+                display:none;
+                position:absolute;
+                min-width:140px;
+            }
+
+            .nav li:hover > ul {
+                display:block;
+            }
+
+            .nav li ul li {
+                position:relative;
+            }
+
+            .nav li ul li ul {
+                right:-140px;
+                top:0px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="header">
+            <ul class="nav">
+                <li><a href="/ejemplo2017/static/view/templates/index.html">Inicio</a></li>
+                <li><a href="">Registros</a>
+                    <ul>
+                        <li><a href="">Gerente</a></li>
+                        <li><a href="/ejemplo2017/static/view/cliente/formulario.html">Cliente</a></li>
+                        <li><a href="">Departamento</a></li>
+                        <li><a href="/ejemplo2017/static/view/producto/producto.html">Producto</a></li>
+                        <li><a href="">Usuario</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Movimientos</a>
+                    <ul>
+                        <li><a href="">Pedidos</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contacto</a></li>
+            </ul>
+        </div>
+        <form action="/ejemplo2017/cliente" method="post"> 
+            <div> 
+                <label for="nombre">Nombre</label>  
+                <input type="text" name="nombre" id="nombre"> 
+            </div> 
+            <div> 
+                <label for="correo">Correo</label> 
+                <input type="email" name="correo" id="correo"> 
+            </div> 
+            <div> 
+                <input type="submit" value="Enviar"> 
+            </div> 
+        </form> 
+    </body>
+</html>
